@@ -12,7 +12,30 @@
 </head>
 <body>
 
-  
+  <main id="expense">
+    <div id="overhead">
+        <div id="balance">
+          <p>My Balance</p>
+          <h1>$921.48</h1>
+        </div>
+        <img src="./images/logo.svg" id="logo" width="50"/>
+    </div>
+    <div id="spending">
+      <h1>Spending - Last 7 days</h1>
+      <div id="bars"></div>
+    </div>
+  </main>
+
+
+  <script>
+    const bars = document.querySelector('#bars')
+
+    fetch('./data.json')
+      .then((res) => res.json())
+      .then((json) => json.forEach(elem =>
+        bars.insertAdjacentHTML("afterend", `<div class="bar" style="height: ${elem.amount}%"></div>`) 
+      ))
+  </script>
 
 </body>
 </html>
