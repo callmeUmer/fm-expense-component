@@ -23,6 +23,18 @@
     <div id="spending">
       <h1>Spending - Last 7 days</h1>
       <div id="bars"></div>
+      <hr />
+
+      <div id="monthly">
+        <div id="info">
+          <p>Total this month</p>
+          <h1>$478.33</h1>
+        </div>
+        <div id="info2">
+          <h4>+2.4%</h4>
+          <p>From last month</p>
+        </div>
+      </div>
     </div>
   </main>
 
@@ -33,7 +45,12 @@
     fetch('./data.json')
       .then((res) => res.json())
       .then((json) => json.forEach(elem =>
-        bars.insertAdjacentHTML("afterend", `<div class="bar" style="height: ${elem.amount}%"></div>`) 
+        bars.insertAdjacentHTML("beforeend", `
+          <div class="bar-wrapper">
+            <p>${elem.day}</p>
+            <div class="bar" style="height: ${1.5 * elem.amount}%"></div>
+          </div>
+        `) 
       ))
   </script>
 
