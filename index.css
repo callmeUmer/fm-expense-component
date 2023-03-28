@@ -133,7 +133,7 @@ body {
     color: var(--neutral-400);
 }
 
-#info2 h4 {
+#info2 h2 {
     font-size: small;
     text-align: right;
     margin-bottom: 0;
