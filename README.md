@@ -34,7 +34,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [here](https://github.com/callmeUmer/fm-expense-component)
-- Live Site URL: [here](https://callemumer.github.io/fm-expense-component)
+- Live Site URL: [here](https://callmeumer.github.io/fm-expense-component/)
 
 ## My process
 
