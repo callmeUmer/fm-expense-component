@@ -46,9 +46,12 @@
       .then((res) => res.json())
       .then((json) => json.forEach(elem =>
         bars.insertAdjacentHTML("beforeend", `
-          <div class="bar-wrapper">
+          <div class="bar-wrapper tooltip">
             <p>${elem.day}</p>
             <div class="bar" style="height: ${1.5 * elem.amount}%"></div>
+              <span class="tooltiptext">
+                $${elem.amount}
+              </span>
           </div>
         `) 
       ))
